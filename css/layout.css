@@ -1,0 +1,30 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* 탭키 눌렀을때 검정선 없앰 */
+    outline-style: none;
+}
+ul {
+    list-style: none;
+}
+a {
+    color: #000;
+    text-decoration: none;
+}
+img {
+    border: 0;
+    /* 세로상의 중앙 */
+    vertical-align: middle;
+}
+html {
+    /* 밑에 rem으로 적으면 font-size만 바꾸면 된다. */
+    font-size: 16px;
+}
+body {
+
+}
+/* 공통클래스 */
+.inner {}
+.wrap {}
