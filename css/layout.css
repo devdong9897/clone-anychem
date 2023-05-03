@@ -23,7 +23,13 @@ html {
     font-size: 16px;
 }
 body {
-
+    font-family: "Nanum Gothic", "NotoSans KR", sans-serif;
+    font-size: 13px;
+    color: #777;
+    line-height: 1.6;
+    letter-spacing: -0.3px;
+    /* 단어로 뭉쳐서 줄내림하기 */
+    word-break: keep-all;
 }
 /* 공통클래스 */
 .inner {}
