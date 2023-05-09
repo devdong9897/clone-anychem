@@ -1,0 +1,53 @@
+@charset "utf-8";
+.mb-nav {
+  position: fixed;
+  right: 15px;
+  top: 20px;
+  width: 30px;
+  height: 25px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  z-index: 999999;
+  font-size: 0;
+}
+.mb-nav span {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 2px;
+}
+.mb-nav span:nth-child(1) {
+  background: #222;
+  top: 0;
+  /* 중심점 오른쪽 꼭지점 */
+  transform-origin: 0 0;
+  transition: transform 0.3s;
+}
+.mb-nav span:nth-child(2) {
+  background: #0072ff;
+  top: calc(50% - 1px);
+  left: 50%;
+  width: 50%;
+  transition: opacity 0.3s;
+}
+.mb-nav span:nth-child(3) {
+  background: #222;
+  top: 100%;
+  opacity: 0;
+  transform-origin: 0 100%;
+  transition: opacity 0.3s, transform 0.3s;
+  
+}
+.mb-nav-active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, -2px);
+}
+.mb-nav-active span:nth-child(2) {
+  opacity: 0;
+}
+.mb-nav-active span:nth-child(3) {
+  opacity: 1;
+  transform: rotate(-45deg) translate(5px, 2px);
+}

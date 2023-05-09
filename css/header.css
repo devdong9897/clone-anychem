@@ -12,9 +12,9 @@
   height: 100px;
   background: #fff;
   overflow: hidden;
-  transition: height 0.5s;
-
   padding: 0 100px;
+  transition: height 0.5s, padding 0.5s;
+  
   z-index: 9999;
 }
 .header::before {
@@ -39,15 +39,18 @@
 
 .logo {
   margin-top: 35px;
+  transition: margin 0.3s;
 }
 .nav {
   margin-left: 240px;
+  transition: margin 0.5s;
 }
 .gnb {
   display: flex;
   /* 가로 여백이 남는 경우 여백처리 */
   justify-content: space-between;
   gap: 0 50px;
+  transition: gap 0.5s;
 }
 .gnb > li {
 }
@@ -108,3 +111,51 @@
   font-family: "Noto Sans KR";
 }
 
+/* header 반응형 */
+@media screen and (max-width: 1720px) {
+  .nav {
+    margin-left: 90px;
+  }
+}
+@media screen and (max-width: 1560px) {
+  .header {
+    padding: 0 70px;
+  }
+  .gnb {
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .side-wrap {
+    display: none;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .header {
+    padding: 0 40px;
+  }
+  .nav {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .gnb > li > a {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1020px) {
+  .gnb {
+    gap: 0 20px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .header {
+    height: 75px;
+  }
+  .logo {
+    margin-top: 20px;
+  }
+  .nav {
+    display: none;
+  }
+}
