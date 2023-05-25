@@ -1,12 +1,5 @@
-// 웹브라우저에 html, css, js, image 를
-// 모두 불러들여서 렌더링 준비가 끝나면
-// 그때 function 의 블럭 안쪽 { } 실행!
-window.onload = function () {
-  // 모바일 버튼 기능
-  let mbNav = document.querySelector(".mb-nav");
-  mbNav.addEventListener("click", function () {
-    mbNav.classList.add("mb-nav-active");
-  });
+window.addEventListener("load", function () {  
+
   // nav 에 마우스 오버하면 header 높이 260px 변경주기
   // nav 에 마우스 아웃하면 header 높이 100px 변경하기
   // header 를 js 로 저장해 보자(변수 정의해 보자)
@@ -32,4 +25,40 @@ window.onload = function () {
     // 클래스를 제거한다.
     header.classList.remove("header-active");
   });
-};
+
+  let gnbA = document.querySelectorAll(".gnb > li");
+  let navBlueBar = document.querySelector(".nav-blue-bar");
+
+  // 최초 위치 및 너비
+  let posX = gnbA[0].getBoundingClientRect().left;
+  let widthX = gnbA[0].getBoundingClientRect().width;
+  navBlueBar.style.left = posX + "px";
+  navBlueBar.style.width = widthX + "px";
+
+  gnbA.forEach((item) => { 
+    item.addEventListener("mouseenter", function(event){
+      let posX = this.getBoundingClientRect().left;
+      let widthX = this.getBoundingClientRect().width;
+      // navBlueBar.style.left = posX + "px";
+      // navBlueBar.style.width = widthX + "px";
+      anime ({ 
+        targets: navBlueBar,
+        left: posX,
+        width: widthX,
+        easing: "easeInOutQuad",
+        duration: 500,
+      });
+
+
+    });
+    // console.log(item.getBoundingClientRect());
+    // console.log(posX);
+  });
+
+  // console.log(a);
+  // a.forEach(function (item) {
+  //   console.log(item);
+  //   console.log(item.getBoundingClientRect().left);
+  //   console.log(item.offsetWidth);
+  // });
+});
