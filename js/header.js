@@ -1,5 +1,4 @@
-window.addEventListener("load", function () {  
-
+window.addEventListener("load", function () {
   // nav 에 마우스 오버하면 header 높이 260px 변경주기
   // nav 에 마우스 아웃하면 header 높이 100px 변경하기
   // header 를 js 로 저장해 보자(변수 정의해 보자)
@@ -35,30 +34,38 @@ window.addEventListener("load", function () {
   navBlueBar.style.left = posX + "px";
   navBlueBar.style.width = widthX + "px";
 
-  gnbA.forEach((item) => { 
-    item.addEventListener("mouseenter", function(event){
+  gnbA.forEach((item) => {
+    item.addEventListener("mouseenter", function (event) {
       let posX = this.getBoundingClientRect().left;
       let widthX = this.getBoundingClientRect().width;
       // navBlueBar.style.left = posX + "px";
       // navBlueBar.style.width = widthX + "px";
-      anime ({ 
+      anime({
         targets: navBlueBar,
         left: posX,
         width: widthX,
         easing: "easeInOutQuad",
         duration: 500,
       });
-
-
     });
-    // console.log(item.getBoundingClientRect());
-    // console.log(posX);
   });
 
-  // console.log(a);
-  // a.forEach(function (item) {
-  //   console.log(item);
-  //   console.log(item.getBoundingClientRect().left);
-  //   console.log(item.offsetWidth);
-  // });
+  // 스크롤에 의한 position:fixed, relative 교체
+  const visual = this.document.querySelector(".visual");
+  this.window.addEventListener("scroll", function(){
+    //스크롤 위치값을 파악
+    let scY = this.window.scrollY;
+    // classList.add() 와 classList.remove() 활용
+    if(scY > 0) {
+      //스크롤바가 아래로 조금이라도 이동
+      //position: fixex;
+      header.classList.add("header-fixed");
+      visual.classList.add("visual-fixed");
+    }else {
+      //스크롤바가 최상단에 위치. 
+      // position: relative;
+      header.classList.remove("header-fixed");
+      visual.classList.remove("visual-fixed");
+    }
+  })
 });

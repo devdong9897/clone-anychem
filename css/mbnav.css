@@ -16,6 +16,7 @@
   opacity: 1;
   top: 0;
 }
+
 .mb-gnb {
   max-width: 750px;
   width: 75%;
@@ -23,10 +24,12 @@
   background: #fff;
   transform: translateX(10px);
   transition: transform 0.5s;
-} 
+}
+
 .mb-wrap-active .mb-gnb {
   transform: translateX(0);
 }
+
 .mb-nav {
   position: fixed;
   display: none;
@@ -51,7 +54,6 @@
 .mb-nav span:nth-child(1) {
   background: #222;
   top: 0;
-  /* 중심점 오른쪽 꼭지점 */
   transform-origin: 0 0;
   transition: transform 0.3s;
 }
@@ -85,8 +87,6 @@
   }
 }
 
-
-
 .mb-gnb {
   padding-top: 60px;
 }
@@ -112,10 +112,12 @@
   align-items: center;
   line-height: 52px;
   padding: 0 20px;
+
   border-bottom: 1px solid #ddd;
   font-size: 16px;
   color: #222;
 }
+
 .side-menu > li > a > i {
   font-size: 10px;
 }

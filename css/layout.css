@@ -1,46 +1,44 @@
 @charset "utf-8";
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* 탭키 눌렀을때 검정선 없앰 */
-    outline-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline-style: none;
 }
 ul {
-    list-style: none;
+  list-style: none;
 }
 a {
-    color: #000;
-    text-decoration: none;
+  color: #000;
+  text-decoration: none;
 }
 img {
-    border: 0;
-    /* 세로상의 중앙 */
-    vertical-align: middle;
+  border: 0;
+  vertical-align: middle;
 }
 html {
-    /* 밑에 rem으로 적으면 font-size만 바꾸면 된다. */
-    font-size: 16px;
+  font-size: 16px;
 }
 body {
-    font-family: "Nanum Gothic", "NotoSans KR", sans-serif;
-    font-size: 13px;
-    color: #777;
-    line-height: 1.6;
-    letter-spacing: -0.3px;
-    /* 단어로 뭉쳐서 줄내림하기 */
-    word-break: keep-all;
+  font-family: "Nanum Gothic", "Noto Sans KR", sans-serif;
+  font-size: 13px;
+  color: #777;
+  line-height: 1.6;
+  letter-spacing: -0.3px;
+  word-break: keep-all;
 }
 /* 공통클래스 */
 .inner {
-    display: block;
-    position: relative;
-    max-width: 1500px;
-    margin: 0 auto;
-    width: 100%;
+  display: block;
+  position: relative;
+
+  width: 100%;
+  
+  max-width: 1500px;
+  margin: 0 auto;
 }
 .wrap {
-    width: 100%;
-    max-width: 1920px;
-    margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
 }
