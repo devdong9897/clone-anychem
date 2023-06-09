@@ -35,6 +35,7 @@ $fontName: "Noto Sans KR", sans-serif;
         .company-box {
           position: relative;
           > div {
+            position: relative;
             height: 480px;
             padding: 50px;
             border-radius: 27px;
@@ -48,9 +49,11 @@ $fontName: "Noto Sans KR", sans-serif;
               font-weight: 400;
             }
             > p {
+              position: relative;
               font-size: 27px;
               line-height: 1.5;
               font-weight: 700;
+              z-index: 9;
             }
 
             a {

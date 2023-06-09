@@ -30,6 +30,7 @@
   position: relative;
 }
 .company-list .company-box > div {
+  position: relative;
   height: 480px;
   padding: 50px;
   border-radius: 27px;
@@ -43,9 +44,11 @@
   font-weight: 400;
 }
 .company-list .company-box > div > p {
+  position: relative;
   font-size: 27px;
   line-height: 1.5;
   font-weight: 700;
+  z-index: 9;
 }
 .company-list .company-box > div a {
   display: inline-block;
