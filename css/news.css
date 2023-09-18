@@ -15,8 +15,8 @@
 }
 .news .inner .news-slide .sw-news .swiper-wrapper .swiper-slide .news-box a p {
   margin: 15px 0 60px;
-  line-height: 1.4;
   font-size: 18px;
+  line-height: 1.4;
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 700;
   height: 50px;
@@ -31,15 +31,15 @@
 }
 
 .sw-news-control {
+  margin-top: 20px;
   position: relative;
   display: block;
   width: 100%;
   text-align: center;
-  margin-top: 20px;
 }
 
 .sw-news-pg .swiper-pagination-bullet {
-  margin: 0 5px;
+  margin: 0 4px;
   opacity: 1;
   border-radius: 4px;
   background: #e5e5e5;
@@ -57,12 +57,12 @@
     padding: 80px 10px !important;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 766px) {
   .news .inner {
     padding-top: 20px !important;
   }
-  .news-box a p {
-    height: 40px !important;
+  .new-box a p {
     font-size: 15px !important;
+    height: 40px !important;
   }
 }/*# sourceMappingURL=news.css.map */

@@ -1,0 +1,8 @@
+애니켐 관리
+1. github 관리
+2. HTML 보완X
+3. css : transition, flax , grid
+   dingbat font(폰트어썸)
+
+이후 원더 플레이스는
+SCSS로 

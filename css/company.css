@@ -45,10 +45,10 @@
 }
 .company-list .company-box > div > p {
   position: relative;
+  z-index: 9;
   font-size: 27px;
   line-height: 1.5;
   font-weight: 700;
-  z-index: 9;
 }
 .company-list .company-box > div a {
   display: inline-block;
@@ -156,6 +156,10 @@
     bottom: 0 !important;
   }
   .company-qa a {
+    background: #fff !important;
+    color: #0075ff !important;
+  }
+  .company-about a {
     background: #000 !important;
     color: #fff !important;
   }
